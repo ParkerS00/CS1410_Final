@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\Final_Proj_Lib\Final_Proj_Lib.csproj" />
+    <ProjectReference Include="..\Final_Proj_Main\Final_Proj_Main.csproj" />
+    <ProjectReference Include="..\Final_Proj_Tests\Final_Proj_Tests.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>
