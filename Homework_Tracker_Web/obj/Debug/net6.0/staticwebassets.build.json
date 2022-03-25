@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "CJG8kiP9lZ8RmCAo6LQIGcBERiRmAATek4Yq79XjgyI=",
+  "Hash": "wunV0AQO7c+EpwKfKogfpC+/9BHJa2eGXINgZ3/uD2w=",
   "Source": "CS_1410_Final_Proj",
   "BasePath": "_content/CS_1410_Final_Proj",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "CS_1410_Final_Proj\\wwwroot",
       "Source": "CS_1410_Final_Proj",
-      "ContentRoot": "C:\\Users\\parke\\coding\\CS_1410_Final_Proj\\Homework_Tracker_Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\parke\\coding\\CS1410_Final\\Homework_Tracker_Web\\wwwroot\\",
       "BasePath": "_content/CS_1410_Final_Proj",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\parke\\coding\\CS_1410_Final_Proj\\Homework_Tracker_Web\\obj\\Debug\\net6.0\\scopedcss\\bundle\\CS_1410_Final_Proj.styles.css",
+      "Identity": "C:\\Users\\parke\\coding\\CS1410_Final\\Homework_Tracker_Web\\obj\\Debug\\net6.0\\scopedcss\\bundle\\CS_1410_Final_Proj.styles.css",
       "SourceId": "CS_1410_Final_Proj",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\parke\\coding\\CS_1410_Final_Proj\\Homework_Tracker_Web\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\parke\\coding\\CS1410_Final\\Homework_Tracker_Web\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
       "BasePath": "_content/CS_1410_Final_Proj",
       "RelativePath": "CS_1410_Final_Proj.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\parke\\coding\\CS_1410_Final_Proj\\Homework_Tracker_Web\\obj\\Debug\\net6.0\\scopedcss\\bundle\\CS_1410_Final_Proj.styles.css"
+      "OriginalItemSpec": "C:\\Users\\parke\\coding\\CS1410_Final\\Homework_Tracker_Web\\obj\\Debug\\net6.0\\scopedcss\\bundle\\CS_1410_Final_Proj.styles.css"
     },
     {
-      "Identity": "C:\\Users\\parke\\coding\\CS_1410_Final_Proj\\Homework_Tracker_Web\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\CS_1410_Final_Proj.bundle.scp.css",
+      "Identity": "C:\\Users\\parke\\coding\\CS1410_Final\\Homework_Tracker_Web\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\CS_1410_Final_Proj.bundle.scp.css",
       "SourceId": "CS_1410_Final_Proj",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\parke\\coding\\CS_1410_Final_Proj\\Homework_Tracker_Web\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\parke\\coding\\CS1410_Final\\Homework_Tracker_Web\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/CS_1410_Final_Proj",
       "RelativePath": "CS_1410_Final_Proj.bundle.scp.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\parke\\coding\\CS_1410_Final_Proj\\Homework_Tracker_Web\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\CS_1410_Final_Proj.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\parke\\coding\\CS1410_Final\\Homework_Tracker_Web\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\CS_1410_Final_Proj.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\parke\\coding\\CS_1410_Final_Proj\\Homework_Tracker_Web\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Identity": "C:\\Users\\parke\\coding\\CS1410_Final\\Homework_Tracker_Web\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "SourceId": "CS_1410_Final_Proj",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\parke\\coding\\CS_1410_Final_Proj\\Homework_Tracker_Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\parke\\coding\\CS1410_Final\\Homework_Tracker_Web\\wwwroot\\",
       "BasePath": "_content/CS_1410_Final_Proj",
       "RelativePath": "css/bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -68,10 +68,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\parke\\coding\\CS_1410_Final_Proj\\Homework_Tracker_Web\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "C:\\Users\\parke\\coding\\CS1410_Final\\Homework_Tracker_Web\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "CS_1410_Final_Proj",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\parke\\coding\\CS_1410_Final_Proj\\Homework_Tracker_Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\parke\\coding\\CS1410_Final\\Homework_Tracker_Web\\wwwroot\\",
       "BasePath": "_content/CS_1410_Final_Proj",
       "RelativePath": "css/bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -85,10 +85,10 @@
       "OriginalItemSpec": "wwwroot\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\parke\\coding\\CS_1410_Final_Proj\\Homework_Tracker_Web\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Identity": "C:\\Users\\parke\\coding\\CS1410_Final\\Homework_Tracker_Web\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "SourceId": "CS_1410_Final_Proj",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\parke\\coding\\CS_1410_Final_Proj\\Homework_Tracker_Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\parke\\coding\\CS1410_Final\\Homework_Tracker_Web\\wwwroot\\",
       "BasePath": "_content/CS_1410_Final_Proj",
       "RelativePath": "css/open-iconic/FONT-LICENSE",
       "AssetKind": "All",
@@ -102,10 +102,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\FONT-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\parke\\coding\\CS_1410_Final_Proj\\Homework_Tracker_Web\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Identity": "C:\\Users\\parke\\coding\\CS1410_Final\\Homework_Tracker_Web\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "SourceId": "CS_1410_Final_Proj",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\parke\\coding\\CS_1410_Final_Proj\\Homework_Tracker_Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\parke\\coding\\CS1410_Final\\Homework_Tracker_Web\\wwwroot\\",
       "BasePath": "_content/CS_1410_Final_Proj",
       "RelativePath": "css/open-iconic/font/css/open-iconic-bootstrap.min.css",
       "AssetKind": "All",
@@ -119,10 +119,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\parke\\coding\\CS_1410_Final_Proj\\Homework_Tracker_Web\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Identity": "C:\\Users\\parke\\coding\\CS1410_Final\\Homework_Tracker_Web\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "SourceId": "CS_1410_Final_Proj",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\parke\\coding\\CS_1410_Final_Proj\\Homework_Tracker_Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\parke\\coding\\CS1410_Final\\Homework_Tracker_Web\\wwwroot\\",
       "BasePath": "_content/CS_1410_Final_Proj",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.eot",
       "AssetKind": "All",
@@ -136,10 +136,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Identity": "C:\\Users\\parke\\coding\\CS_1410_Final_Proj\\Homework_Tracker_Web\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Identity": "C:\\Users\\parke\\coding\\CS1410_Final\\Homework_Tracker_Web\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "SourceId": "CS_1410_Final_Proj",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\parke\\coding\\CS_1410_Final_Proj\\Homework_Tracker_Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\parke\\coding\\CS1410_Final\\Homework_Tracker_Web\\wwwroot\\",
       "BasePath": "_content/CS_1410_Final_Proj",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.otf",
       "AssetKind": "All",
@@ -153,10 +153,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Identity": "C:\\Users\\parke\\coding\\CS_1410_Final_Proj\\Homework_Tracker_Web\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Identity": "C:\\Users\\parke\\coding\\CS1410_Final\\Homework_Tracker_Web\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "SourceId": "CS_1410_Final_Proj",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\parke\\coding\\CS_1410_Final_Proj\\Homework_Tracker_Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\parke\\coding\\CS1410_Final\\Homework_Tracker_Web\\wwwroot\\",
       "BasePath": "_content/CS_1410_Final_Proj",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.svg",
       "AssetKind": "All",
@@ -170,10 +170,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Identity": "C:\\Users\\parke\\coding\\CS_1410_Final_Proj\\Homework_Tracker_Web\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Identity": "C:\\Users\\parke\\coding\\CS1410_Final\\Homework_Tracker_Web\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "SourceId": "CS_1410_Final_Proj",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\parke\\coding\\CS_1410_Final_Proj\\Homework_Tracker_Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\parke\\coding\\CS1410_Final\\Homework_Tracker_Web\\wwwroot\\",
       "BasePath": "_content/CS_1410_Final_Proj",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.ttf",
       "AssetKind": "All",
@@ -187,10 +187,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Identity": "C:\\Users\\parke\\coding\\CS_1410_Final_Proj\\Homework_Tracker_Web\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Identity": "C:\\Users\\parke\\coding\\CS1410_Final\\Homework_Tracker_Web\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "SourceId": "CS_1410_Final_Proj",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\parke\\coding\\CS_1410_Final_Proj\\Homework_Tracker_Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\parke\\coding\\CS1410_Final\\Homework_Tracker_Web\\wwwroot\\",
       "BasePath": "_content/CS_1410_Final_Proj",
       "RelativePath": "css/open-iconic/font/fonts/open-iconic.woff",
       "AssetKind": "All",
@@ -204,10 +204,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Identity": "C:\\Users\\parke\\coding\\CS_1410_Final_Proj\\Homework_Tracker_Web\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Identity": "C:\\Users\\parke\\coding\\CS1410_Final\\Homework_Tracker_Web\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "SourceId": "CS_1410_Final_Proj",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\parke\\coding\\CS_1410_Final_Proj\\Homework_Tracker_Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\parke\\coding\\CS1410_Final\\Homework_Tracker_Web\\wwwroot\\",
       "BasePath": "_content/CS_1410_Final_Proj",
       "RelativePath": "css/open-iconic/ICON-LICENSE",
       "AssetKind": "All",
@@ -221,10 +221,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\ICON-LICENSE"
     },
     {
-      "Identity": "C:\\Users\\parke\\coding\\CS_1410_Final_Proj\\Homework_Tracker_Web\\wwwroot\\css\\open-iconic\\README.md",
+      "Identity": "C:\\Users\\parke\\coding\\CS1410_Final\\Homework_Tracker_Web\\wwwroot\\css\\open-iconic\\README.md",
       "SourceId": "CS_1410_Final_Proj",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\parke\\coding\\CS_1410_Final_Proj\\Homework_Tracker_Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\parke\\coding\\CS1410_Final\\Homework_Tracker_Web\\wwwroot\\",
       "BasePath": "_content/CS_1410_Final_Proj",
       "RelativePath": "css/open-iconic/README.md",
       "AssetKind": "All",
@@ -238,10 +238,10 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\README.md"
     },
     {
-      "Identity": "C:\\Users\\parke\\coding\\CS_1410_Final_Proj\\Homework_Tracker_Web\\wwwroot\\css\\site.css",
+      "Identity": "C:\\Users\\parke\\coding\\CS1410_Final\\Homework_Tracker_Web\\wwwroot\\css\\site.css",
       "SourceId": "CS_1410_Final_Proj",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\parke\\coding\\CS_1410_Final_Proj\\Homework_Tracker_Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\parke\\coding\\CS1410_Final\\Homework_Tracker_Web\\wwwroot\\",
       "BasePath": "_content/CS_1410_Final_Proj",
       "RelativePath": "css/site.css",
       "AssetKind": "All",
@@ -255,10 +255,10 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
-      "Identity": "C:\\Users\\parke\\coding\\CS_1410_Final_Proj\\Homework_Tracker_Web\\wwwroot\\favicon.ico",
+      "Identity": "C:\\Users\\parke\\coding\\CS1410_Final\\Homework_Tracker_Web\\wwwroot\\favicon.ico",
       "SourceId": "CS_1410_Final_Proj",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\parke\\coding\\CS_1410_Final_Proj\\Homework_Tracker_Web\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\parke\\coding\\CS1410_Final\\Homework_Tracker_Web\\wwwroot\\",
       "BasePath": "_content/CS_1410_Final_Proj",
       "RelativePath": "favicon.ico",
       "AssetKind": "All",

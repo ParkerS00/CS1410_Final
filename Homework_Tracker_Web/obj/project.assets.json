@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\parke\\coding\\CS_1410_Final_Proj\\Homework_Tracker_Web\\CS_1410_Final_Proj.csproj",
+      "projectUniqueName": "C:\\Users\\parke\\coding\\CS1410_Final\\Homework_Tracker_Web\\CS_1410_Final_Proj.csproj",
       "projectName": "CS_1410_Final_Proj",
-      "projectPath": "C:\\Users\\parke\\coding\\CS_1410_Final_Proj\\Homework_Tracker_Web\\CS_1410_Final_Proj.csproj",
+      "projectPath": "C:\\Users\\parke\\coding\\CS1410_Final\\Homework_Tracker_Web\\CS_1410_Final_Proj.csproj",
       "packagesPath": "C:\\Users\\parke\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\parke\\coding\\CS_1410_Final_Proj\\Homework_Tracker_Web\\obj\\",
+      "outputPath": "C:\\Users\\parke\\coding\\CS1410_Final\\Homework_Tracker_Web\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\parke\\AppData\\Roaming\\NuGet\\NuGet.Config"
