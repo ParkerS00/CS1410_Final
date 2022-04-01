@@ -10,3 +10,15 @@ c:\Users\parke\coding\CS_1410_Final_Proj\Final_Proj_Lib\obj\Debug\net6.0\Final_P
 c:\Users\parke\coding\CS_1410_Final_Proj\Final_Proj_Lib\obj\Debug\net6.0\Final_Proj_Lib.dll
 c:\Users\parke\coding\CS_1410_Final_Proj\Final_Proj_Lib\obj\Debug\net6.0\ref\Final_Proj_Lib.dll
 c:\Users\parke\coding\CS_1410_Final_Proj\Final_Proj_Lib\obj\Debug\net6.0\Final_Proj_Lib.pdb
+c:\Users\parke\coding\CS1410_Final\Final_Proj_Lib\bin\Debug\net6.0\Final_Proj_Lib.deps.json
+c:\Users\parke\coding\CS1410_Final\Final_Proj_Lib\bin\Debug\net6.0\Final_Proj_Lib.dll
+c:\Users\parke\coding\CS1410_Final\Final_Proj_Lib\bin\Debug\net6.0\ref\Final_Proj_Lib.dll
+c:\Users\parke\coding\CS1410_Final\Final_Proj_Lib\bin\Debug\net6.0\Final_Proj_Lib.pdb
+c:\Users\parke\coding\CS1410_Final\Final_Proj_Lib\obj\Debug\net6.0\Final_Proj_Lib.csproj.AssemblyReference.cache
+c:\Users\parke\coding\CS1410_Final\Final_Proj_Lib\obj\Debug\net6.0\Final_Proj_Lib.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\parke\coding\CS1410_Final\Final_Proj_Lib\obj\Debug\net6.0\Final_Proj_Lib.AssemblyInfoInputs.cache
+c:\Users\parke\coding\CS1410_Final\Final_Proj_Lib\obj\Debug\net6.0\Final_Proj_Lib.AssemblyInfo.cs
+c:\Users\parke\coding\CS1410_Final\Final_Proj_Lib\obj\Debug\net6.0\Final_Proj_Lib.csproj.CoreCompileInputs.cache
+c:\Users\parke\coding\CS1410_Final\Final_Proj_Lib\obj\Debug\net6.0\Final_Proj_Lib.dll
+c:\Users\parke\coding\CS1410_Final\Final_Proj_Lib\obj\Debug\net6.0\ref\Final_Proj_Lib.dll
+c:\Users\parke\coding\CS1410_Final\Final_Proj_Lib\obj\Debug\net6.0\Final_Proj_Lib.pdb

@@ -8,30 +8,27 @@
     <h1>Welcome to my Homework Tracker</h1>
     <p>What would you like to do?</p>
 
-    <button @onclick="Hello">Hello</button>
-
-    <button >Log in</button><br><br>
+    <button>Log in</button><br><br>
 
     <button>Forgot Password</button><br><br>
 
     <button>Create Account</button><br><br>
 
     <button>View Example To-Do List</button>
+
+    <input type=text @bind="FirstName">
 }
 
 
 
 
 @code {
+
     public static bool showThings = true;
-    public void LogIn()
-    {
 
-    }
+    string FirstName;
 
-    private string Hello()
-    {
-        return "Hi Parker";
-    }
+
+ 
+   
 }
-
