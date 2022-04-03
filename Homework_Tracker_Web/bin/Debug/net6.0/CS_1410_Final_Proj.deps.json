@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v6.0": {
       "CS_1410_Final_Proj/1.0.0": {
+        "dependencies": {
+          "Final_Proj_Lib": "1.0.0"
+        },
         "runtime": {
           "CS_1410_Final_Proj.dll": {}
+        }
+      },
+      "Final_Proj_Lib/1.0.0": {
+        "runtime": {
+          "Final_Proj_Lib.dll": {}
         }
       }
     }
   },
   "libraries": {
     "CS_1410_Final_Proj/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Final_Proj_Lib/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

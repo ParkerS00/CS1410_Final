@@ -52,3 +52,6 @@ C:\Users\parke\coding\CS1410_Final\Homework_Tracker_Web\obj\Debug\net6.0\CS_1410
 C:\Users\parke\coding\CS1410_Final\Homework_Tracker_Web\obj\Debug\net6.0\ref\CS_1410_Final_Proj.dll
 C:\Users\parke\coding\CS1410_Final\Homework_Tracker_Web\obj\Debug\net6.0\CS_1410_Final_Proj.pdb
 C:\Users\parke\coding\CS1410_Final\Homework_Tracker_Web\obj\Debug\net6.0\CS_1410_Final_Proj.genruntimeconfig.cache
+C:\Users\parke\coding\CS1410_Final\Homework_Tracker_Web\bin\Debug\net6.0\Final_Proj_Lib.dll
+C:\Users\parke\coding\CS1410_Final\Homework_Tracker_Web\bin\Debug\net6.0\Final_Proj_Lib.pdb
+C:\Users\parke\coding\CS1410_Final\Homework_Tracker_Web\obj\Debug\net6.0\CS_1410_Final_Proj.csproj.CopyComplete

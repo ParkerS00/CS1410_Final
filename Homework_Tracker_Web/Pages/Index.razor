@@ -1,5 +1,5 @@
 ﻿@page "/"
-@using CS_1410_Final_Proj
+@using CS_1410_Final_Proj_Lib
 
 <PageTitle>Index</PageTitle>
 
@@ -14,9 +14,16 @@
 
     <button>Create Account</button><br><br>
 
-    <button>View Example To-Do List</button>
+    <button>View Example To-Do List</button> <br><br>
 
-    <input type=text @bind="FirstName">
+    <p> Please enter your firstname</p>
+    <input type=text @bind="FirstName" /><br><br>
+
+    <p>Please enter your lastname</p>
+    <input type=text @bind="LastName" /><br><br>
+
+    <p>Please enter your password</p>
+    <input type=text @bind="Password" /><br><br>
 }
 
 
@@ -27,8 +34,8 @@
     public static bool showThings = true;
 
     string FirstName;
+    string LastName;
+    int Password;
 
-
- 
-   
+    //Person User = new();
 }

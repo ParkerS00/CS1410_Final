@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net6.0": {
+      "Final_Proj_Lib/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Final_Proj_Lib.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Final_Proj_Lib.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Final_Proj_Lib/1.0.0": {
+      "type": "project",
+      "path": "../Final_Proj_Lib/Final_Proj_Lib.csproj",
+      "msbuildProject": "../Final_Proj_Lib/Final_Proj_Lib.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net6.0": [
+      "Final_Proj_Lib >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\parke\\.nuget\\packages\\": {}
@@ -31,7 +50,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\parke\\coding\\CS1410_Final\\Final_Proj_Lib\\Final_Proj_Lib.csproj": {
+              "projectPath": "C:\\Users\\parke\\coding\\CS1410_Final\\Final_Proj_Lib\\Final_Proj_Lib.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
