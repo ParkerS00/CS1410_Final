@@ -8,14 +8,19 @@
     <h1>Welcome to my Homework Tracker</h1>
     <p>What would you like to do?</p>
 
-    <button>Log in</button><br><br>
+    <button onclick="@ToLogInScreen">Log in</button><br><br>
 
     <button>Forgot Password</button><br><br>
 
-    <button>Create Account</button><br><br>
+    <button onclick="@ToCreateAccountScreen">Create Account</button><br><br>
 
     <button>View Example To-Do List</button> <br><br>
 
+
+}
+
+@if (logInClicked == true && showThings == false)
+{
     <p> Please enter your firstname</p>
     <input type=text @bind="FirstName" /><br><br>
 
@@ -24,18 +29,113 @@
 
     <p>Please enter your password</p>
     <input type=text @bind="Password" /><br><br>
+
+    <p>Please enter your Id</p>
+    <input type=text @bind="Id" /><br><br>
+
+    <button onclick="@LogIn">Log In</button>
 }
 
+@if (createAccountClicked == true && showThings == false)
+{
+    <p> Please enter your firstname</p>
+    <input type=text @bind="FirstName" /><br><br>
+
+    <p>Please enter your lastname</p>
+    <input type=text @bind="LastName" /><br><br>
+
+    <p>Please enter your password</p>
+    <input type=text @bind="Password" /><br><br>
+
+    <p>Please enter your Id</p>
+    <input type=text @bind="Id" /><br><br>
+
+    <button onclick="@CreateAccount">Create Account</button>
+}
+
+@foreach (var person in Person.People)
+{
+
+}
 
 
 
 @code {
 
     public static bool showThings = true;
+    public static bool logInClicked = false;
+    public static bool createAccountClicked = false;
+    public static bool userNamesMatch = false;
+    public static bool lastNamesMatch = false;
+    public static bool passwrodsMatch = false;
+    public static bool idsMatch = false;
+    public List<Person> People;
+
 
     string FirstName;
     string LastName;
     int Password;
+    int Id;
 
-    //Person User = new();
+    public void LoadPeople()
+    {
+        if (File.Exists("people.txt"))
+        {
+            People = Person.LoadPerson();
+        }
+    }
+
+    public void ToLogInScreen()
+    {
+        showThings = false;
+        logInClicked = true;
+    }
+
+    public void LogIn()
+    {
+
+        Person User = new Person(FirstName, LastName, Password, Id);
+
+        if (User.FirstName == FirstName)
+        {
+            userNamesMatch = true;
+        }
+        else
+        {
+            userNamesMatch = false;
+        }
+        if (User.LastName == LastName)
+        {
+            lastNamesMatch = true;
+        }
+        else 
+        {
+            lastNamesMatch = false;
+        }
+
+
+        if (userNamesMatch == true && lastNamesMatch == true)
+        {
+            Console.WriteLine("They match!");
+        }
+        logInClicked = false;
+        showThings = true;
+    }
+
+    public void ToCreateAccountScreen()
+    {
+        showThings = false;
+        createAccountClicked = true;
+    }
+
+    public void CreateAccount()
+    {
+        Person User = new Person(FirstName, LastName, Password, Id);
+        User.SavePerson();
+        showThings = true;
+        createAccountClicked = false;
+    }
+
+    
+
 }

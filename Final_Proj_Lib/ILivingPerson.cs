@@ -1,6 +1,6 @@
 namespace CS_1410_Final_Proj_Lib;
 
-public interface ILivingPerson
+public abstract class ILivingPerson
 {
     public string FirstName {get; set;}
      public string LastName {get; set;}

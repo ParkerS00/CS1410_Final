@@ -20,20 +20,16 @@ public class Homework : IHomework
 
 public class Person : ILivingPerson
 {
-    private List<Person> People = new List<Person>();
-    public string FirstName { get; set; }
-    public string LastName { get; set; }
-    public int Password { get; set; }
-    public int Id { get; set; }
+    public static List<Person> People = new List<Person>();
+
 
     public Person(string firstName, string lastName, int password, int id)
     {
-        Person User = new Person(firstName, lastName, password, id);
         if (firstName.Length > 1)
         {
             FirstName = firstName;
         }
-        else 
+        else
         {
             throw new NameNotLongEnoughException();
         }
@@ -50,6 +46,48 @@ public class Person : ILivingPerson
         Password = password;
         Id = id;
 
-        People.Add(User);
+        People.Add(this);
+    }
+
+    public void SavePerson()
+    {
+        using (var writer = new StreamWriter("people.txt"))
+        {
+            foreach (var people in People)
+            {
+                writer.WriteLine("Firstname:" + this.FirstName);
+                writer.WriteLine("Lastname:" + this.LastName);
+                writer.WriteLine("Password:" + this.Password);
+                writer.WriteLine("Id:" + this.Id);
+            }
+            writer.Close();
+        }
+    }
+
+    public List<Person> LoadPerson()
+    {
+        foreach (var lines in File.ReadAllLines("people.txt"))
+        {
+            var parts = lines.Split(':');
+            if (parts[0] == "Firstname")
+            {
+                FirstName = parts[1];
+            }
+            else if (parts[0] == "Lastname")
+            {
+                LastName = parts[1];
+            }
+            else if (parts[0] == "Password")
+            {
+                Password = int.Parse(parts[1]);
+            }
+            else if (parts[0] == "Id")
+            {
+                Id = int.Parse(parts[1]);
+            }
+            Person User = new Person(FirstName, LastName, Password, Id);
+            People.Add(User);
+        }
+        return People;
     }
 }
