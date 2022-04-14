@@ -11,7 +11,7 @@ public class Tests
     public void Setup()
     {
     }
-    
+
     [Test]
     public void PersonObjectContainsProperValues()
     {
@@ -41,6 +41,20 @@ public class Tests
         DateTime dateDue = new DateTime(2022, 4, 13);
         Homework assignment = new Homework("Test", dateAdded, dateDue, 20);
         List<Homework> homeworkList = new List<Homework>();
-        
+        homeworkList.Add(assignment);
+        Assert.AreEqual(1, homeworkList.Count);
+    }
+
+    [Test]
+    public void RemoveItemToList()
+    {
+        DateTime dateAdded = new DateTime(2022, 4, 10);
+        DateTime dateDue = new DateTime(2022, 4, 13);
+        Homework assignment = new Homework("Test", dateAdded, dateDue, 20);
+        List<Homework> homeworkList = new List<Homework>();
+        homeworkList.Add(assignment);
+        Assert.AreEqual(1, homeworkList.Count);
+        homeworkList.Remove(assignment);
+        Assert.AreEqual(0, homeworkList.Count);
     }
 }
