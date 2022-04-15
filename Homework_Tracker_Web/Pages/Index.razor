@@ -10,8 +10,6 @@
 
     <button onclick="@ToLogInScreen">Log in</button><br><br>
 
-    <button>Forgot Password</button><br><br>
-
     <button onclick="@ToCreateAccountScreen">Create Account</button><br><br>
 
     <button>View Example To-Do List</button> <br><br>
@@ -53,9 +51,52 @@
     <button onclick="@CreateAccount">Create Account</button>
 }
 
-@foreach (var person in Person.People)
+@if (logInsMatch == true && showThings == false && fakeBool == true)
 {
+    <p>What would you like to do?</p>
 
+    <button onclick="@ToViewHomeworkPage">View your to do list</button><br><br>
+
+    <button onclick="@ToAddHomeworkPage">Add to your to do list</button><br><br>
+
+    <button>Remove from your to do list</button><br><br>
+
+    <button>Complete things from your to do list</button><br><br>
+
+    <button onclick="@LogOut">Log out</button><br><br>
+
+}
+
+@if (homeworkAddedToListClicked == true && showThings == false)
+{
+    <h1>What would you like to add to your homework list?</h1>
+
+    <p>Name of the assignment</p>
+    <input type=text @bind="AssignmentName"><br><br>
+
+    <p>Date that the assignment was added</p>
+    <input type=text @bind="DateAdded"><br><br>
+
+    <p>Date that the assignment is due</p>
+    <input type=text @bind="DueDate"><br><br>
+
+    <p>Points the assignment is worth</p>
+    <input type=text @bind="PointsWorth"><br><br>
+
+    <button onclick="@CreateHomeworkPage">Add To To-Do List</button><br><br>
+}
+
+@if (viewHomeworkPageClicked == true && showThings == false && goBack == true)
+{
+    if (File.Exists("UserToDoList.txt"))
+    {
+        foreach (var lines in File.ReadAllLines("UserToDoList.txt"))
+        {
+            <p>@lines</p>
+        }
+    }
+
+    <button onclick="@goBackToLogInPage">Go back</button>
 }
 
 
@@ -65,23 +106,50 @@
     public static bool showThings = true;
     public static bool logInClicked = false;
     public static bool createAccountClicked = false;
-    public static bool userNamesMatch = false;
+    public static bool logInsMatch = false;
+    public static bool firstNamesMatch = false;
     public static bool lastNamesMatch = false;
-    public static bool passwrodsMatch = false;
+    public static bool passwordsMatch = false;
     public static bool idsMatch = false;
-    public List<Person> People;
-
+    public static bool fakeBool = false;
+    public static bool homeworkAddedToListClicked = false;
+    public static bool viewHomeworkPageClicked = false;
+    public static bool goBack = false;
+    public static List<Person> People;
+    Person person = new();
 
     string FirstName;
     string LastName;
     int Password;
     int Id;
 
+    string AssignmentName;
+    DateTime DateAdded;
+    DateTime DueDate;
+    int PointsWorth;
+
+    public void LogOut()
+    {
+        firstNamesMatch = false;
+        lastNamesMatch = false;
+        idsMatch = false;
+        passwordsMatch = false;
+        showThings = true;
+        logInClicked = false;
+        createAccountClicked = false;
+        logInsMatch = false;
+    }
+
     public void LoadPeople()
     {
         if (File.Exists("people.txt"))
         {
-            People = Person.LoadPerson();
+            People = person.LoadPerson("people.txt");
+        }
+        else
+        {
+            Console.WriteLine("There is no file");
+            var writer = new StreamWriter("people.txt", true);
         }
     }
 
@@ -89,37 +157,65 @@
     {
         showThings = false;
         logInClicked = true;
+        firstNamesMatch = false;
+        lastNamesMatch = false;
+        passwordsMatch = false;
+        idsMatch = false;
     }
 
     public void LogIn()
     {
-
         Person User = new Person(FirstName, LastName, Password, Id);
-
-        if (User.FirstName == FirstName)
+        if (File.Exists("people.txt"))
         {
-            userNamesMatch = true;
+            User.LoadPerson("people.txt");
+
+            @* foreach (var lines in File.ReadAllLines("people.txt"))
+            {
+                var parts = lines.Split(':');
+                if (User.FirstName == parts[1].ToString())
+                {
+                    firstNamesMatch = true;
+                }
+                if (User.LastName == parts[1])
+                {
+                    lastNamesMatch = true;
+                }
+                if (User.Password.ToString() == parts[1])
+                {
+                    passwordsMatch = true;
+                }
+                if (User.Id.ToString() == parts[1])
+                {
+                    idsMatch = true;
+                }
+            } *@
         }
         else
         {
-            userNamesMatch = false;
-        }
-        if (User.LastName == LastName)
-        {
-            lastNamesMatch = true;
-        }
-        else 
-        {
-            lastNamesMatch = false;
+
         }
 
 
-        if (userNamesMatch == true && lastNamesMatch == true)
+        if (firstNamesMatch == true && lastNamesMatch == true && passwordsMatch == true && idsMatch == true)
         {
-            Console.WriteLine("They match!");
+            logInsMatch = true;
+            showThings = false;
+            fakeBool = true;
+            logInClicked = false;
         }
-        logInClicked = false;
-        showThings = true;
+        if (firstNamesMatch == false || lastNamesMatch == false || passwordsMatch == false || idsMatch == false)
+        {
+            logInsMatch = false;
+            Console.WriteLine("Something you gave me doesn't match up with our system, or you have not made an account yet.");
+            Console.WriteLine($"Firstname is {firstNamesMatch}");
+            Console.WriteLine($"Lastname is {lastNamesMatch}");
+            Console.WriteLine($"Password is {passwordsMatch}");
+            Console.WriteLine($"Id is {idsMatch}");
+            showThings = true;
+            logInClicked = false;
+
+        }
     }
 
     public void ToCreateAccountScreen()
@@ -136,6 +232,33 @@
         createAccountClicked = false;
     }
 
-    
+    public void ToAddHomeworkPage()
+    {
+        showThings = false;
+        homeworkAddedToListClicked = true;
+        fakeBool = false;
+    }
 
+    public void CreateHomeworkPage()
+    {
+        Homework assignment = new Homework(AssignmentName, DateAdded, DueDate, PointsWorth);
+        assignment.addToDoList(AssignmentName, DateAdded, DueDate, PointsWorth);
+        assignment.saveHomework();
+        homeworkAddedToListClicked = false;
+        fakeBool = true;
+    }
+
+    public void ToViewHomeworkPage()
+    {
+        showThings = false;
+        viewHomeworkPageClicked = true;
+        fakeBool = false;
+        goBack = true;
+    }
+
+    public void goBackToLogInPage()
+    {
+        fakeBool = true;
+        goBack = false;
+    }
 }
