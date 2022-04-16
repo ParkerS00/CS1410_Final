@@ -59,9 +59,7 @@
 
     <button onclick="@ToAddHomeworkPage">Add to your to do list</button><br><br>
 
-    <button>Remove from your to do list</button><br><br>
-
-    <button>Complete things from your to do list</button><br><br>
+    <button onclick="@goToRemoveFromListPage">Remove from your to do list</button><br><br>
 
     <button onclick="@LogOut">Log out</button><br><br>
 
@@ -88,15 +86,48 @@
 
 @if (viewHomeworkPageClicked == true && showThings == false && goBack == true)
 {
-    if (File.Exists("UserToDoList.txt"))
+    if (File.Exists(userToDoFile))
     {
-        foreach (var lines in File.ReadAllLines("UserToDoList.txt"))
+        foreach (var lines in File.ReadAllLines(userToDoFile))
         {
             <p>@lines</p>
         }
     }
 
     <button onclick="@goBackToLogInPage">Go back</button>
+}
+
+@if (removeItemFromListClicked == true && showThings == false && fakeBool == false)
+{
+    <p>What would you like to remove from your to do list?</p>
+    if (File.Exists(userToDoFile))
+    {
+        foreach (var lines in File.ReadAllLines(userToDoFile))
+        {
+            <p>@lines</p>
+        }
+    }
+
+
+    int i = 1;
+    List<string> toDoList = new List<string>();
+    foreach (var lines in File.ReadAllLines(userToDoFile))
+    {
+        toDoList.Add(lines);
+        //Console.WriteLine(lines + "   " + i);
+        i++;
+    }
+    toDoList.RemoveAt(linesRemoved);
+    File.WriteAllLines(userToDoFile, toDoList);
+
+    <p>What item would you like to remove?</p>
+    <input type=text @bind="linesRemoved"><br><br>
+
+
+    <button onclick="=@removeFromList">Remove from list</button>
+    removeItemFromListClicked = false;
+    fakeBool = true;
+    logInsMatch = true;
 }
 
 
@@ -115,8 +146,14 @@
     public static bool homeworkAddedToListClicked = false;
     public static bool viewHomeworkPageClicked = false;
     public static bool goBack = false;
+    public static bool removeItemFromListClicked = false;
     public static List<Person> People;
     Person person = new();
+    Homework homework = new();
+    public static int linesRemoved;
+    public static int amountOfLines;
+    public static string userToDoFile;
+
 
     string FirstName;
     string LastName;
@@ -148,8 +185,7 @@
         }
         else
         {
-            Console.WriteLine("There is no file");
-            var writer = new StreamWriter("people.txt", true);
+            File.Create("people.txt");
         }
     }
 
@@ -166,36 +202,27 @@
     public void LogIn()
     {
         Person User = new Person(FirstName, LastName, Password, Id);
-        if (File.Exists("people.txt"))
+        foreach (var lines in File.ReadAllLines("people.txt"))
         {
-            User.LoadPerson("people.txt");
-
-            @* foreach (var lines in File.ReadAllLines("people.txt"))
+            var parts = lines.Split(":");
+            if (User.FirstName == parts[1].ToString())
             {
-                var parts = lines.Split(':');
-                if (User.FirstName == parts[1].ToString())
-                {
-                    firstNamesMatch = true;
-                }
-                if (User.LastName == parts[1])
-                {
-                    lastNamesMatch = true;
-                }
-                if (User.Password.ToString() == parts[1])
-                {
-                    passwordsMatch = true;
-                }
-                if (User.Id.ToString() == parts[1])
-                {
-                    idsMatch = true;
-                }
-            } *@
+                firstNamesMatch = true;
+                userToDoFile = $"{User.FirstName}.txt";
+            }
+            if (User.LastName == parts[1])
+            {
+                lastNamesMatch = true;
+            }
+            if (User.Password.ToString() == parts[1])
+            {
+                passwordsMatch = true;
+            }
+            if (User.Id.ToString() == parts[1])
+            {
+                idsMatch = true;
+            }
         }
-        else
-        {
-
-        }
-
 
         if (firstNamesMatch == true && lastNamesMatch == true && passwordsMatch == true && idsMatch == true)
         {
@@ -207,7 +234,7 @@
         if (firstNamesMatch == false || lastNamesMatch == false || passwordsMatch == false || idsMatch == false)
         {
             logInsMatch = false;
-            Console.WriteLine("Something you gave me doesn't match up with our system, or you have not made an account yet.");
+            Console.WriteLine("Something you gave me doesn't match up with our system, or you haven't created an account yet.");
             Console.WriteLine($"Firstname is {firstNamesMatch}");
             Console.WriteLine($"Lastname is {lastNamesMatch}");
             Console.WriteLine($"Password is {passwordsMatch}");
@@ -228,8 +255,10 @@
     {
         Person User = new Person(FirstName, LastName, Password, Id);
         User.SavePerson();
+        userToDoFile = $"{User.FirstName}.txt";
         showThings = true;
         createAccountClicked = false;
+        //Console.WriteLine(userToDoFile);
     }
 
     public void ToAddHomeworkPage()
@@ -243,9 +272,20 @@
     {
         Homework assignment = new Homework(AssignmentName, DateAdded, DueDate, PointsWorth);
         assignment.addToDoList(AssignmentName, DateAdded, DueDate, PointsWorth);
-        assignment.saveHomework();
-        homeworkAddedToListClicked = false;
-        fakeBool = true;
+        if (File.Exists(userToDoFile))
+        {
+            assignment.saveHomework(userToDoFile);
+            homeworkAddedToListClicked = false;
+            fakeBool = true;
+        }
+        else
+        {
+            File.Create(userToDoFile).Close();
+            assignment.saveHomework(userToDoFile);
+            homeworkAddedToListClicked = false;
+            fakeBool = true;
+        }
+        //Console.WriteLine(userToDoFile);
     }
 
     public void ToViewHomeworkPage()
@@ -260,5 +300,18 @@
     {
         fakeBool = true;
         goBack = false;
+    }
+
+    public void goToRemoveFromListPage()
+    {
+        showThings = false;
+        removeItemFromListClicked = true;
+        fakeBool = false;
+    }
+
+    public void removeFromList()
+    {
+        homework.removeToDoList(linesRemoved, userToDoFile);
+
     }
 }

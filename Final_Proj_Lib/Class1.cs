@@ -1,22 +1,75 @@
 ﻿namespace CS_1410_Final_Proj_Lib;
 using Final_Proj_Lib;
 
-public interface IHomework
-{
-    public string AssignmentName { get; set; }
-    public string DateAdded { get; set; }
-    public string DateDue { get; set; }
-    public int PointsWorth { get; set; }
-}
-
 public class Homework : IHomework
 {
-    public string AssignmentName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-    public string DateAdded { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-    public string DateDue { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-    public int PointsWorth { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-}
+    public string AssignmentName { get; set; }
+    public DateTime DateAdded { get; set; }
+    public DateTime DueDate { get; set; }
+    public int PointsWorth { get; set; }
+    public static string userToDoFile {get; set;}
+    public static int counter = 1;
 
+    public static List<Homework> homeworkList = new List<Homework>();
+
+    public Homework (string assignmentName, DateTime dateAdded, DateTime dueDate, int pointsWorth)
+    {
+        AssignmentName = assignmentName;
+        DateAdded = dateAdded;
+        DueDate = dueDate;
+        PointsWorth = pointsWorth;
+    }
+
+    public Homework ()
+    {
+
+    }
+
+    public void addToDoList(string assignmentName, DateTime dateAdded, DateTime dueDate, int pointsWorth)
+    {
+        Homework assignment = new Homework(assignmentName, dateAdded, dueDate, pointsWorth);
+        homeworkList.Add(assignment);
+    }
+
+    public void removeToDoList(int linesRemoved, string userToDoFile)
+    {
+        int i = 1;
+        List<string> toDoList = new List<string>();
+        foreach (var lines in File.ReadAllLines(userToDoFile))
+        {
+            toDoList.Add(lines);
+            Console.WriteLine(lines + i);
+            i++;
+        }
+        toDoList.RemoveAt(linesRemoved);
+        File.WriteAllLines(userToDoFile, toDoList);
+    }
+
+    public static int homeworkCounter = 1;
+
+    public void saveHomework(string userToDoFile)
+    {
+        using (var writer = new StreamWriter(userToDoFile, true))
+        {
+            foreach (var line in homeworkList)
+            {
+                writer.WriteLine(homeworkCounter + "  " + counter);
+                homeworkCounter++;
+                writer.WriteLine(homeworkCounter + "  Assignment Name:" + this.AssignmentName + ".");
+                homeworkCounter++;
+                writer.WriteLine(homeworkCounter + "  Date Added:" + this.DateAdded + ".");
+                homeworkCounter++;
+                writer.WriteLine(homeworkCounter + "  Due Date:" + this.DueDate + ".");
+                homeworkCounter++;
+                writer.WriteLine(homeworkCounter + "  Points Worth:" + this.PointsWorth + ".");
+                homeworkCounter++;
+                counter++;
+            }
+            writer.Close();
+            homeworkList.Clear();
+        }
+    }
+}
 
 public class Person : ILivingPerson
 {
@@ -49,9 +102,13 @@ public class Person : ILivingPerson
         People.Add(this);
     }
 
+    public Person()
+    {
+    }
+
     public void SavePerson()
     {
-        using (var writer = new StreamWriter("people.txt"))
+        using (var writer = new StreamWriter("people.txt", true))
         {
             foreach (var people in People)
             {
@@ -61,12 +118,13 @@ public class Person : ILivingPerson
                 writer.WriteLine("Id:" + this.Id);
             }
             writer.Close();
+            People.Clear();
         }
     }
 
-    public List<Person> LoadPerson()
+    public List<Person> LoadPerson(string textFile)
     {
-        foreach (var lines in File.ReadAllLines("people.txt"))
+        foreach (var lines in File.ReadAllLines(textFile))
         {
             var parts = lines.Split(':');
             if (parts[0] == "Firstname")
