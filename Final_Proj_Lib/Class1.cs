@@ -7,12 +7,13 @@ public class Homework : IHomework
     public DateTime DateAdded { get; set; }
     public DateTime DueDate { get; set; }
     public int PointsWorth { get; set; }
-    public static string userToDoFile {get; set;}
+    public static string userToDoFile { get; set; }
     public static int counter = 1;
+    private IStorageService storageService;
 
     public static List<Homework> homeworkList = new List<Homework>();
 
-    public Homework (string assignmentName, DateTime dateAdded, DateTime dueDate, int pointsWorth)
+    public Homework(string assignmentName, DateTime dateAdded, DateTime dueDate, int pointsWorth)
     {
         AssignmentName = assignmentName;
         DateAdded = dateAdded;
@@ -20,15 +21,21 @@ public class Homework : IHomework
         PointsWorth = pointsWorth;
     }
 
-    public Homework ()
+    public Homework(IStorageService storageService)
+    {
+        this.storageService = storageService;
+    }
+
+    public Homework()
     {
 
     }
 
-    public void addToDoList(string assignmentName, DateTime dateAdded, DateTime dueDate, int pointsWorth)
+    public List<Homework> addToDoList(string assignmentName, DateTime dateAdded, DateTime dueDate, int pointsWorth)
     {
         Homework assignment = new Homework(assignmentName, dateAdded, dueDate, pointsWorth);
         homeworkList.Add(assignment);
+        return homeworkList;
     }
 
     public void removeToDoList(int linesRemoved, string userToDoFile)
@@ -74,6 +81,7 @@ public class Homework : IHomework
 public class Person : ILivingPerson
 {
     public static List<Person> People = new List<Person>();
+    private IStorageService storageService;
 
 
     public Person(string firstName, string lastName, int password, int id)

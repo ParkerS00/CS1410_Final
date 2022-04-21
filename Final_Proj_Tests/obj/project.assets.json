@@ -3876,11 +3876,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\parke\\coding\\CS1410_Final\\Final_Proj_Tests\\Final_Proj_Tests.csproj",
+      "projectUniqueName": "c:\\Users\\parke\\coding\\CS1410_Final\\Final_Proj_Tests\\Final_Proj_Tests.csproj",
       "projectName": "Final_Proj_Tests",
-      "projectPath": "C:\\Users\\parke\\coding\\CS1410_Final\\Final_Proj_Tests\\Final_Proj_Tests.csproj",
+      "projectPath": "c:\\Users\\parke\\coding\\CS1410_Final\\Final_Proj_Tests\\Final_Proj_Tests.csproj",
       "packagesPath": "C:\\Users\\parke\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\parke\\coding\\CS1410_Final\\Final_Proj_Tests\\obj\\",
+      "outputPath": "c:\\Users\\parke\\coding\\CS1410_Final\\Final_Proj_Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\parke\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -3895,8 +3895,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\parke\\coding\\CS1410_Final\\Final_Proj_Lib\\Final_Proj_Lib.csproj": {
-              "projectPath": "C:\\Users\\parke\\coding\\CS1410_Final\\Final_Proj_Lib\\Final_Proj_Lib.csproj"
+            "c:\\Users\\parke\\coding\\CS1410_Final\\Final_Proj_Lib\\Final_Proj_Lib.csproj": {
+              "projectPath": "c:\\Users\\parke\\coding\\CS1410_Final\\Final_Proj_Lib\\Final_Proj_Lib.csproj"
             }
           }
         }

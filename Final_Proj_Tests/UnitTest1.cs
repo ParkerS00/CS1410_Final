@@ -57,4 +57,18 @@ public class Tests
         homeworkList.Remove(assignment);
         Assert.AreEqual(0, homeworkList.Count);
     }
+
+    [Test]
+    public void TestingStorageService()
+    {
+        DateTime dateAdded = new DateTime(2022, 4, 10);
+        DateTime dateDue = new DateTime(2022, 4, 13);
+        Homework assignment = new Homework("Test", dateAdded, dateDue, 20);
+        Homework homework = new Homework(new TestingStorageService());
+        homework.addToDoList("Test", dateAdded, dateDue, 20);
+        homework.saveHomework("testing.txt");
+
+        Assert.AreEqual("Test", assignment.AssignmentName);
+
+    }
 }
