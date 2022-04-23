@@ -108,6 +108,28 @@ public class Person : ILivingPerson
         Id = id;
 
         People.Add(this);
+
+    }
+
+    public string MakePerson(string firstName, string lastName, int password, int id)
+    {
+        string errorMessage;
+
+        try
+        {
+            firstName = FirstName;
+            lastName = LastName;
+            errorMessage = null;
+        }
+        catch (NameNotLongEnoughException)
+        {
+            errorMessage = "Your first or last name is not long enough please try again";
+        }
+
+        Password = password;
+        Id = id;
+
+        return errorMessage;
     }
 
     public Person()

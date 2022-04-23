@@ -48,6 +48,9 @@
     <p>Please enter your Id</p>
     <input type=text @bind="Id" /><br><br>
 
+    <footer>If you don't put in a number for your password or id it will default to 0</footer><br>
+    <footer>The firstname and lastname can take in any characters but needs to be longer than 1 character long</footer>
+
     <button onclick="@CreateAccount">Create Account</button>
 }
 
@@ -110,24 +113,22 @@
 
 
     int i = 1;
-    List<string> toDoList = new List<string>();
     foreach (var lines in File.ReadAllLines(userToDoFile))
     {
         toDoList.Add(lines);
-        //Console.WriteLine(lines + "   " + i);
+        //Console.WriteLine(lines + " " + i);
         i++;
     }
-    toDoList.RemoveAt(linesRemoved);
-    File.WriteAllLines(userToDoFile, toDoList);
 
     <p>What item would you like to remove?</p>
     <input type=text @bind="linesRemoved"><br><br>
 
 
-    <button onclick="=@removeFromList">Remove from list</button>
+    <button onclick="@removeFromList">Remove from list</button>
     removeItemFromListClicked = false;
     fakeBool = true;
     logInsMatch = true;
+    linesRemoved = 0;
 }
 
 
@@ -151,10 +152,8 @@
     Person person = new();
     Homework homework = new();
     public static int linesRemoved;
-    public static int amountOfLines;
     public static string userToDoFile;
-    private 
-
+    public static List<string> toDoList = new List<string>();
 
     string FirstName;
     string LastName;
@@ -254,6 +253,7 @@
 
     public void CreateAccount()
     {
+        
         Person User = new Person(FirstName, LastName, Password, Id);
         User.SavePerson();
         userToDoFile = $"{User.FirstName}.txt";
@@ -313,6 +313,5 @@
     public void removeFromList()
     {
         homework.removeToDoList(linesRemoved, userToDoFile);
-
     }
 }
